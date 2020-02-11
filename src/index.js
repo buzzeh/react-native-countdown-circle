@@ -110,8 +110,8 @@ export default class PercentageCircle extends React.PureComponent {
     textStyle: null,
     onTimeElapsed: () => null,
     updateText: (elapsedSeconds, totalSeconds) =>
-      (totalSeconds - elapsedSeconds).toString(),
-  };
+        Math.floor((elapsedSeconds/totalSeconds) * 100) + "%",
+  }
 
   constructor(props) {
     super(props)
